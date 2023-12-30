@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Калькулятор прямокутника і чат</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Розрахунок прямокутника</h1>
+    <label for="length">Довжина:</label>
+    <input type="number" id="length" placeholder="Введіть довжину">
+    <br><br>
+    <label for="width">Ширина:</label>
+    <input type="number" id="width" placeholder="Введіть ширину">
+    <br><br>
+    <p>Периметр: <span id="perimeter">0</span></p>
+    <p>Площа: <span id="area">0</span></p>
+    <p>Довжина діагоналі: <span id="diagonal">0</span></p>
+  </div>
+</body>
+<script src="rectangle_calculator.js"></script>
+<body>
+  <div class="chat-container">
+    <div class="chat-box">
+      <div class="user-panel">
+        <h2>User 1</h2>
+        <input type="text" id="user1Input">
+        <button onclick="sendMessage(1)">Відправити</button>
+      </div>
+      <div class="message-panel" id="chatMessages">
+        <h2>Повідомлення</h2>
+      </div>
+      <div class="user-panel">
+        <h2>User 2</h2>
+        <input type="text" id="user2Input">
+        <button onclick="sendMessage(2)">Відправити</button>
+      </div>
+    </div>
+  </div>
+  <script src ="chat.js"></script>
+</body>
+<head>
+  <title>Транслітерація</title>
+</head>
+<body>
+  <div>
+      <label for="ukrainianText">Український текст:</label>
+      <input type="text" id="ukrainianText" oninput="transliterate()" />
+  </div>
+  <div>
+      <label for="transliteratedText">Транслітерований текст:</label>
+      <input type="text" id="transliteratedText" readonly />
+  </div>
+  <script src = "translate.js"></script>
+</body>
+  <div class="container">
+      <h3 class="mt-2">Визначення дня тижня</h3>
+      <label for="birthDate">Оберіть дату народження:</label>
+      <input type="date" id="birthDate">
+      <button id="calculateButton" class="btn btn-primary">Визначити день тижня</button>
+      <p id="result" style="font-weight: 700;"></p>
+  </div>
+  <script src="birthday.js"></script>
+</html>

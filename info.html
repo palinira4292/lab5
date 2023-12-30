@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця ресторану</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .action-button {
+            padding: 5px 10px;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .view-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .edit-button {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .delete-button {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Назва ресторану</th>
+                <th>Адреса</th>
+                <th>Телефон</th>
+                <th>Дії</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ресторан 1</td>
+                <td>Адреса 1</td>
+                <td>Телефон 1</td>
+                <td class="action-buttons">
+                    <button class="action-button view-button">Переглянути</button>
+                    <button class="action-button edit-button">Редагувати</button>
+                    <button class="action-button delete-button">Видалити</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Ресторан 2</td>
+                <td>Адреса 2</td>
+                <td>Телефон 2</td>
+                <td class="action-buttons">
+                    <button class="action-button view-button">Переглянути</button>
+                    <button class="action-button edit-button">Редагувати</button>
+                    <button class="action-button delete-button">Видалити</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

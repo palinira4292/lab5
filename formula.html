@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Розрахунок прямокутника</title>
+</head>
+<body>
+    <h1>Розрахунок прямокутника</h1>
+    <form>
+        <label for="length">Довжина:</label>
+        <input type="text" id="length" name="length">
+        <br>
+        <label for="width">Ширина:</label>
+        <input type="text" id="width" name="width">
+    </form>
+    
+    <h2>Результати:</h2>
+    <p>Периметр: <span id="perimeter">0</span></p>
+    <p>Площа: <span id="area">0</span></p>
+    <p>Довжина діагоналі: <span id="diagonal">0</span></p>
+
+    <script>
+        // Отримуємо посилання на текстові поля та написи для результатів
+        const lengthInput = document.getElementById("length");
+        const widthInput = document.getElementById("width");
+        const perimeterOutput = document.getElementById("perimeter");
+        const areaOutput = document.getElementById("area");
+        const diagonalOutput = document.getElementById("diagonal");
+
+        // Функція для обчислення результатів та оновлення написів
+        function calculateRectangle() {
+            const length = parseFloat(lengthInput.value);
+            const width = parseFloat(widthInput.value);
+
+            if (!isNaN(length) && !isNaN(width)) {
+                const perimeter = 2 * (length + width);
+                const area = length * width;
+                const diagonal = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
+
+                perimeterOutput.textContent = perimeter.toFixed(2);
+                areaOutput.textContent = area.toFixed(2);
+                diagonalOutput.textContent = diagonal.toFixed(2);
+            } else {
+                perimeterOutput.textContent = "Некоректні дані";
+                areaOutput.textContent = "Некоректні дані";
+                diagonalOutput.textContent = "Некоректні дані";
+            }
+        }
+
+        // Додаємо обробник події на текстові поля для зміни
+        lengthInput.addEventListener("input", calculateRectangle);
+        widthInput.addEventListener("input", calculateRectangle);
+
+        // Викликаємо функцію для початкового обчислення (якщо значення вже введені)
+        calculateRectangle();
+    </script>
+</body>
+</html>
